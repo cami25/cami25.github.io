@@ -1,0 +1,39 @@
+
+
+p {
+    font-size: 13px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-weight: bolder;
+    font-weight: "500;"
+}
+
+span{
+    color: deeppink;
+}
+
+.ReasonsWhy{
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+table, tr, th, td{
+    width: auto;
+    border-collapse: collapse;
+    padding: 30px;
+    width: fit-content;
+    border:10px deepskyblue;
+    font-family: initial;
+    text-align: center; 
+}
+
+#desc{
+    font-size: 20px;
+}
+
+img{
+    margin-left: 25px;
+    width: 500;
+    height: 500;
+}

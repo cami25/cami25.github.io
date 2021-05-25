@@ -1,0 +1,21 @@
+body {
+    
+    background: white;
+    font-family: Arial;
+    text-align: center;
+}
+
+.container-fluid{
+
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.card {
+    
+    margin-left:5%;
+    margin-right: 5%;
+    margin-bottom: 10%;
+    display:inline-block;
+}

@@ -1,0 +1,18 @@
+body {
+    background-image: url("images/polymesh13_04_01.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+h1 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h4 {
+    text-align: center;
+}
+
+#dogNames {
+    color: rgb(83, 55, 17);
+    text-align: justify;
+}
