@@ -10,12 +10,6 @@
     <!-- Bootstrap CSS/JS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-        crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="ethan.css">
     <title>Team 2: HTML page about dogs!</title>
@@ -27,12 +21,6 @@
 
             font-size: 20px;
         }
-
-        /*Changing color of header 1 when hovering*/
-        #pod:hover {
-
-            color: aquamarine;
-        }
     </style>
 </head>
 
@@ -40,7 +28,7 @@
 
     <!-- Navbar -->
     <nav class="pl-sl-4 navbar navbar-expand-sm bg-light navbar-light fixed-top">
-        <a class="navbar-brand" href="https://maki-webdesign.github.io/dogs/ethan/ethan.html">Ethan Dith</a>
+        <a class="navbar-brand" href="https://cami25.github.io/dogs/ethan/ethan.html">Ethan Dith</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#theNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -51,11 +39,9 @@
                     <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Teams
                         Bootstrap Website</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="https://maki-webdesign.github.io/dogs/cami/cami.html">Cami</a>
-                        <a class="dropdown-item"
-                            href="https://maki-webdesign.github.io/dogs/darcie/darcie.html">Darcie</a>
-                        <a class="dropdown-item"
-                            href="https://maki-webdesign.github.io/dogs/maraki/maraki.html">Maraki</a>
+                        <a class="dropdown-item" href="https://cami25.github.io/dogs/cami/cami.html">Cami</a>
+                        <a class="dropdown-item" href="https://cami25.github.io/dogs/darcie/darcie.html">Darcie</a>
+                        <a class="dropdown-item" href="https://cami25.github.io/dogs/maraki/maraki.html">Maraki</a>
                     </div>
                 </div>
             </div>
@@ -74,60 +60,132 @@
                         title="My Favorite Dog" style="width: 300px; height: 300px;">
                 </div>
                 <div class="col-sm-6 mt-xl-5">
-                    <h2 style="color:white;">DOGS</h2>
-                    <p>I love dogs I could <br /> play with them forever.</p>
+                    <h2 style="color:white;">Web</h2>
+                    <p>HTML/CSS/Javascript Webpage about dogs!</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!--Creating cards-->
-    <div class="three-cards-container">
-        <h1 id="pod">Pictures of Dogs</h1>
-        <div class="card" style="width: 16rem;">
-            <img src="https://www.thesprucepets.com/thmb/wpN_ZunUaRQAc_WRdAQRxeTbyoc=/4231x2820/filters:fill(auto,1)/adorable-white-pomeranian-puppy-spitz-921029690-5c8be25d46e0fb000172effe.jpg"
-                class="card-img-top" alt="dog1" title="White Pomeranian">
-            <div class="card-body">
-                <h5 class="card-title">White Pomeranian</h5>
-                <p class="card-text">Aren't they so cute!</p>
-            </div>
+    <!-- NEW Flexbar for checking dog temperatures -->
+    <h4>Temp Converter: F to C sample converter</h4>
+    <div class="container mb-3">
+        <div class="d-flex flex-column" style="background-color: #e3e3e3;">
+            <p id="output1"></p>
         </div>
+    </div>
 
-        <div class="card" style=" width: 18rem;">
-            <img src="https://img1.looper.com/img/gallery/first-look-at-live-action-clifford-the-big-red-dog-is-causing-a-stir/intro-1606325430.jpg"
-                class="card-img-top" alt="dog2" title="Clifford">
-            <div class="card-body">
-                <h5 class="card-title">Clifford</h5>
-                <p class="card-text">Big Red Dog</p>
-            </div>
+    <h4>Temp Converter: C to F sample converter</h4>
+    <div class="container mb-3">
+        <div class="d-flex flex-column" style="background-color: #e3e3e3;">
+            <p id="output2"></p>
         </div>
+    </div>
 
-        <div class="card" style=" width: 18rem;">
-            <img src="https://www.thesprucepets.com/thmb/OBeOXeOjmLnhc57r0pgZxJXAf5E=/2186x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/beagle-puppy-sitting-in-grass-974534572-5c8be4c446e0fb000146acf6.jpg"
-                class="card-img-top" alt="dog3" title="Beagle">
-            <div class="card-body">
-                <h5 class="card-title">Beagle</h5>
-                <p class="card-text">So small and adorable!</p>
+    <!-- NEW Flexbar for checking dog temperatures -->
+    <h4>Temp Converter: Check for healthy dogs</h4>
+    <div class="container mb-5">
+        <div class="d-flex flex-column" style="background-color: #e3e3e3;">
+            <nav class="m-auto">
+                <div class="nav nav-tabs" id="nav-tab">
+                    <a class="nav-link active" data-toggle="tab" href="#nav-ftoc">Dog Temperature from
+                        F to C</a>
+                    <a class="nav-link" data-toggle="tab" href="#nav-ctof">Dog Temperature from
+                        C to F</a>
+                </div>
+            </nav>
+            
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-ftoc">
+                    <h5 style="margin: 2%;">Dog Temperature in Celsius <br> Average Dog Temperature: 38.3 C - 39.2 F
+                    </h5>
+                    <form class="m-2">
+                        <input type="number" id="tempNum" placeholder="Enter Fahrenheit:"
+                            oninput="tempConverter1(this.value)" onchange="tempConverter1(this.value)">
+                        <p id="outputC"></p>
+                    </form>
+                </div>
+
+                <div class="tab-pane fade" id="nav-ctof">
+                    <h5 style="margin: 2%;">Dog Temperature in Fahrenheit <br> Average Dog Temperature: 101 F - 102.5 F
+                    </h5>
+                    <form class="m-2">
+                        <input type="number" id="tempNum2" placeholder="Enter Celcius:"
+                            oninput="tempConverter2(this.value)" onchange="tempConverter2(this.value)">
+                        <p id="outputF"></p>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 
-    <!--Flexbar for cool dog names -->
-    <div class="container">
-        <div class="d-flex flex-column rounded-pill" style="background-color: #e3e3e3;">
-            <div class="p-1" style="font-size: 30px;"> <img src="https://www.ethandith.com/bob.png"
-                    style="height: 50px; width: 50px;"> Cool Dog Names</div>
-            <div class="p-2" style="font-size: 15px;">Rocket</div>
-            <div class="p-2" style="font-size: 15px;">Bartholomew</div>
-            <div class="p-2" style="font-size: 15px;">Luna</div>
-            <div class="p-2" style="font-size: 15px;">Helios</div>
-        </div>
-    </div>
+
 
     <!--Footer-->
-    <footer class="d-flex flex-row-reverse mt-5" style="background-color: #e3e3e3; ">
+    <footer class="d-flex flex-row-reverse mt-5 fixed-bottom" style="background-color: #e3e3e3; ">
         <div class="p-1" style="font-size: 10px;">B IMD 233</div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <!-- NEW Javascript -->
+    <script>
+        //Fahrenheit to Celsius converter
+        function tempConverter1(tempNum) {
+            tempNum = parseFloat(tempNum);
+            var tempFinal = (tempNum - 32) / (9 / 5);
+            if (tempFinal > 39.2) {
+                var tempSub = tempFinal - 39.2;
+                document.getElementById("outputC").innerHTML = tempFinal.toFixed(1) + " C. Dogs Temperature is above average by " + tempSub.toFixed(1) + " C";
+            } else if (tempFinal < 38.3) {
+                var tempSub = 38.3 - tempFinal;
+                document.getElementById("outputC").innerHTML = tempFinal.toFixed(1) + " C. Dogs Temperature is below average by " + tempSub.toFixed(1) + " C";
+            } else {
+                document.getElementById("outputC").innerHTML = tempFinal.toFixed(1) + " C. Dogs Temperature is average";
+            }
+            return tempFinal;
+        }
+
+        //tempConverter from F to C
+        var sampleTemps = [98, 87, 101, 300, 900];
+        var temps = "";
+        for (i = 0; i < sampleTemps.length; i++) {
+            var numb = tempConverter1(sampleTemps[i]);
+            temps += sampleTemps[i] + " F: " + numb.toFixed(1) + " C<br>";
+        }
+        document.getElementById("output1").innerHTML = temps;
+
+
+        //Celsius to Fahrenheit converter
+        function tempConverter2(tempNum2) {
+            tempNum2 = parseFloat(tempNum2);
+            var tempFinal = (tempNum2 * (9 / 5)) + 32;
+            if (tempFinal > 102.5) {
+                var tempSub = tempFinal - 102.5;
+                document.getElementById("outputF").innerHTML = tempFinal.toFixed(1) + " F. Dogs Temperature is above average by " + tempSub.toFixed(1) + " F";
+            } else if (tempFinal < 101.0) {
+                var tempSub = 101.0 - tempFinal;
+                document.getElementById("outputF").innerHTML = tempFinal.toFixed(1) + " F. Dogs Temperature is below average by " + tempSub.toFixed(1) + " F";
+            } else {
+                document.getElementById("outputF").innerHTML = tempFinal.toFixed(1) + " F. Dogs Temperature is average";
+            }
+            return tempFinal;
+        }
+
+        //tempConverter from C to F
+        var sampleTemps2 = [30, 39, 38.3, 40.1, 90];
+        var temps2 = "";
+        for (i = 0; i < sampleTemps2.length; i++) {
+            var numb = tempConverter2(sampleTemps2[i]);
+            temps2 += sampleTemps2[i] + " C: " + numb.toFixed(1) + " F<br>";
+        }
+        document.getElementById("output2").innerHTML = temps2;
+    </script>
 </body>
 
 </html>
