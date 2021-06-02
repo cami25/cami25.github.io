@@ -99,7 +99,7 @@
                 <div class="tab-pane fade show active" id="nav-ftoc">
                     <h5 style="margin: 2%;">Dog Temperature in Celsius <br>Average Dog Temperature: 101 F - 102.5 F
                     </h5>
-                    <form class="m-2">
+                    <form id="form1" class="m-2">
                         <input type="number" id="tempNum" placeholder="Enter Fahrenheit:"
                             oninput="tempConverter1(this.value)" onchange="tempConverter1(this.value)">
                         <p id="outputC"></p>
@@ -109,7 +109,7 @@
                 <div class="tab-pane fade" id="nav-ctof">
                     <h5 style="margin: 2%;">Dog Temperature in Fahrenheit <br> Average Dog Temperature: 38.3 C - 39.2 F
                     </h5>
-                    <form class="m-2">
+                    <form id="form2" class="m-2">
                         <input type="number" id="tempNum2" placeholder="Enter Celcius:"
                             oninput="tempConverter2(this.value)" onchange="tempConverter2(this.value)">
                         <p id="outputF"></p>
@@ -149,18 +149,18 @@
                 document.getElementById("outputC").innerHTML = tempFinal.toFixed(1) + " C. Dogs Temperature is average";
             }
             return tempFinal;
-            reset() 
         }
 
         //tempConverter from F to C
         var sampleTemps = [98, 87, 101, 300, 900];
         var temps = "";
+        var emt;
         for (i = 0; i < sampleTemps.length; i++) {
             var numb = tempConverter1(sampleTemps[i]);
             temps += sampleTemps[i] + " F: " + numb.toFixed(1) + " C<br>";
         }
         document.getElementById("output1").innerHTML = temps;
-
+        tempConverter1(emt);
 
         //Celsius to Fahrenheit converter
         function tempConverter2(tempNum2) {
@@ -176,17 +176,20 @@
                 document.getElementById("outputF").innerHTML = tempFinal.toFixed(1) + " F. Dogs Temperature is average";
             }
             return tempFinal;
-            reset() 
         }
+        
 
         //tempConverter from C to F
         var sampleTemps2 = [30, 39, 38.3, 40.1, 90];
+        var emt;
         var temps2 = "";
         for (i = 0; i < sampleTemps2.length; i++) {
             var numb = tempConverter2(sampleTemps2[i]);
             temps2 += sampleTemps2[i] + " C: " + numb.toFixed(1) + " F<br>";
         }
         document.getElementById("output2").innerHTML = temps2;
+        tempConverter2(emt);
+
     </script>
 </body>
 
