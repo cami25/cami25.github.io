@@ -107,7 +107,7 @@
                 </div>
 
                 <div class="tab-pane fade" id="nav-ctof">
-                    <h5 style="margin: 2%;">Dog Temperature in Fahrenheit <br>Average Dog Temperature: 101 F - 102.5 F 
+                    <h5 style="margin: 2%;">Dog Temperature in Fahrenheit <br>Average Dog Temperature: 101 F - 102.5 F
                     </h5>
                     <form id="form2" class="m-2">
                         <input type="number" id="tempNum2" placeholder="Enter Celcius:"
@@ -135,7 +135,7 @@
 
     <!-- NEW Javascript -->
     <script>
-        //Fahrenheit to Celsius converter
+        //Fahrenheit to Celsius converter function
         function tempConverter1(tempNum) {
             tempNum = parseFloat(tempNum);
             var tempFinal = (tempNum - 32) / (9 / 5);
@@ -151,7 +151,7 @@
             return tempFinal;
         }
 
-        //tempConverter from F to C
+        //passing through tempConverter function(from F to C)
         var sampleTemps = [98, 87, 101, 300, 900];
         var temps = "";
         var emt;
@@ -162,7 +162,7 @@
         document.getElementById("output1").innerHTML = temps;
         tempConverter1(emt);
 
-        //Celsius to Fahrenheit converter
+        //Celsius to Fahrenheit converter function
         function tempConverter2(tempNum2) {
             tempNum2 = parseFloat(tempNum2);
             var tempFinal = (tempNum2 * (9 / 5)) + 32;
@@ -178,7 +178,7 @@
             return tempFinal;
         }
 
-        //tempConverter from C to F
+        //passing through tempConverter2 function (from C to F)
         var sampleTemps2 = [30, 39, 38.3, 40.1, 90];
         var emt;
         var temps2 = "";
