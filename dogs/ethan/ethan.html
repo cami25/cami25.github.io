@@ -102,6 +102,7 @@
                     <form id="form1" class="m-2">
                         <input type="number" id="tempNum" placeholder="Enter Fahrenheit:"
                             oninput="tempConverter1(this.value)">
+                        <p id="healthy1"></p>
                         <p id="outputC"></p>
                     </form>
                 </div>
@@ -112,6 +113,7 @@
                     <form id="form2" class="m-2">
                         <input type="number" id="tempNum2" placeholder="Enter Celcius:"
                             oninput="tempConverter2(this.value)">
+                        <p id="healthy2"></p>
                         <p id="outputF"></p>
                     </form>
                 </div>
@@ -141,11 +143,14 @@
             var tempFinal = (tempNum - 32) / (9 / 5);
             if (tempFinal > 39.2) {
                 var tempSub = tempFinal - 39.2;
+                document.getElementById("healthy1").innerHTML = "Dogs Temperature is unhealthy";
                 document.getElementById("outputC").innerHTML = tempFinal.toFixed(1) + " C. Dogs Temperature is above average by " + tempSub.toFixed(1) + " C";
             } else if (tempFinal < 38.3) {
                 var tempSub = 38.3 - tempFinal;
+                document.getElementById("healthy1").innerHTML = "Dogs Temperature is unhealthy";
                 document.getElementById("outputC").innerHTML = tempFinal.toFixed(1) + " C. Dogs Temperature is below average by " + tempSub.toFixed(1) + " C";
             } else {
+                document.getElementById("healthy1").innerHTML = "Dogs Temperature is healthy";
                 document.getElementById("outputC").innerHTML = tempFinal.toFixed(1) + " C. Dogs Temperature is average";
             }
             return tempFinal;
@@ -168,11 +173,14 @@
             var tempFinal = (tempNum2 * (9 / 5)) + 32;
             if (tempFinal > 102.5) {
                 var tempSub = tempFinal - 102.5;
+                document.getElementById("healthy2").innerHTML = "Dogs Temperature is unhealthy";
                 document.getElementById("outputF").innerHTML = tempFinal.toFixed(1) + " F. Dogs Temperature is above average by " + tempSub.toFixed(1) + " F";
             } else if (tempFinal < 101.0) {
                 var tempSub = 101.0 - tempFinal;
+                document.getElementById("healthy2").innerHTML = "Dogs Temperature is unhealthy";
                 document.getElementById("outputF").innerHTML = tempFinal.toFixed(1) + " F. Dogs Temperature is below average by " + tempSub.toFixed(1) + " F";
             } else {
+                document.getElementById("healthy2").innerHTML = "Dogs Temperature is healthy";
                 document.getElementById("outputF").innerHTML = tempFinal.toFixed(1) + " F. Dogs Temperature is average";
             }
             return tempFinal;
