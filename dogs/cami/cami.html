@@ -15,8 +15,6 @@
 
   <title>Team 2: HTML page about dogs</title>
 
-  <!--Mark Comment 5/16: This link to your stylesheet isn't working because you named it Cami.CSS. Rename the file to cami.css-->
-
   <link rel="stylesheet" href="cami.css">
   <style>
     .center {
@@ -140,6 +138,18 @@
 
 <head>
   <script>
+    //for in
+
+const person = {
+    name: "Camille",
+    age: 22,
+    occupation : "Guard dog trainer"
+};
+
+for (const prop in person) {
+    console.log(person [prop]);
+}
+    alert('Would you like to continue to Guard Dogs 101?')
     function myFunction() {
       document.getElementById("demo").innerHTML = 110 + 85;
     }
@@ -153,14 +163,5 @@
 
   <button type="button" onclick="myFunction()">Reveal answer</button>
 </body>
-
-<head>
-  <h2> Dogs Names</h2>
-  <script>
-    const names = ['Hunter', 'Max', 'Spike', 'Rocky', 'Kylo', 'Killer'];
-
-    for (name of name) console.log(name[i]);
-  </script>
-</head>
 
 </html>
