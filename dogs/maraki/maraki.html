@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
@@ -113,18 +112,24 @@
 
     <img src="https://i.pinimg.com/originals/8c/c1/fd/8cc1fd1df8712ac33966ec371a3af936.jpg" style="width:100px;">Baby Wiener<br />
 
-    <!--Adding Submition Form-->
-    <div class="submit">
-      <br />My Doggo: <input type="text" name="Dog"><br />
-
-      <input type="submit">
-    </div>
-  </form>
-  
-  <!--End submit form-->
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+    
+ <!--Adding Submition Form iwth Javascript-->
+   
+  <head>
+    <script>
+      
+  function myFunction() {
+    document.getElementById("demo").innerHTML = 0;
+  }
+    </script>
+    </head>
+    
+      <body>
+      <form>
+        <p id="demo">My Doggo:</p>
+        <input type="text" name="mydoggo"><br />
+<br><br>
+      <button type="button" onclick="myFunction()">Submit</button>   
+      </form>
+    </body>
 </html>
