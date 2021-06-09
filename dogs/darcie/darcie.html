@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
   <!--Group HTML page about dogs-->
   <title>Team 2: HTML page about dogs</title>
 
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="background image"
     href="https://www.vecteezy.com/vector-art/598473-light-blue-vector-low-poly-crystal-background-polygon-design-pa">
@@ -15,7 +15,7 @@
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <link rel="stylesheet" href="darcie.css">
 
-  <style>
+   <style>
     .center {
       text-align: center;
       color: rgb(175, 31, 31);
@@ -29,13 +29,10 @@
       color: rgb(178, 62, 207);
     }
 
-    img {
+    img.dog {
       border: 5px solid rgb(83, 55, 17);
     }
 
-    img:hover {
-      border: 5px solid rgb(175, 31, 31);
-    }
   </style>
 </head>
 
@@ -104,10 +101,10 @@
         <div class="media">
           <div class="media-body p-5 d-flex align-self-center">
             <!--Mark Comment 5/16: Generally, you want to stay away from making text blue or purple since those colors are associated with hyperlinks.-->
-            <p> Here's a random dog image I thought was <span style="color:rgb(0, 185, 185)"><strong>
+            <p> Here's a random dog image I thought was <span style="color:rgb(182, 199, 30)"><strong>
                   amusing</strong></span>:</p>
           </div>
-          <img src="images/Darcie_dogPic.jpg" class="rounded p-1 img-fluid d-flex align-self-center" width="70%"
+          <img src="images/Darcie_dogPic.jpg" class="dog rounded p-1 img-fluid d-flex align-self-center" width="70%"
             alt="image of a yawning basset hound with fully-extended ears" title="Dumbo dog?">
         </div>
       </div>
@@ -151,14 +148,33 @@
             <td style="border: 1px solid rgb(191, 223, 243); text-align: left; padding: 8px;"> Lucille </td>
           </tr>
         </table>
-        <!-- end Table -->
-
       </div>
     </div>
-  </div>
-  <br>
-  <br>
+    <!-- end Table -->
 
+    <!-- start JS memory game -->
+    <div class="row bg-light rounded p-2 mt-3">
+      <div class="col">
+
+        <h3>Score:<span id="result"></span></h3>
+
+        <div class="grid">
+
+        </div>
+
+        <br>
+      <br>
+      </div>
+    </div>
+    <!-- end game -->
+  </div>
+ <br>
+ <br>
+
+ <!-- Javascript -->
+ <script src="darcie.js"></script>
+
+    <!-- Bootstrap scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
