@@ -4,51 +4,51 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardArray = [
         {
             name: 'smGame1',
-            pic: 'images/smGame1.png'
+            img: 'images/smGame1.png'
         },
         {
             name: 'smGame1',
-            pic: 'images/smGame1.png'
+            img: 'images/smGame1.png'
         },
         {
             name: 'smGame2',
-            pic: 'images/smGame2.png'
+            img: 'images/smGame2.png'
         },
         {
             name: 'smGame2',
-            pic: 'images/smGame2.png'
+            img: 'images/smGame2.png'
         },
         {
             name: 'smGame3',
-            pic: 'images/smGame3.png'
+            img: 'images/smGame3.png'
         },
         {
             name: 'smGame3',
-            pic: 'images/smGame3.png'
+            img: 'images/smGame3.png'
         },
         {
             name: 'smGame4',
-            pic: 'images/smGame4.png'
+            img: 'images/smGame4.png'
         },
         {
             name: 'smGame4',
-            pic: 'images/smGame4.png'
+            img: 'images/smGame4.png'
         },
         {
             name: 'smGame5',
-            pic: 'images/smGame5.png'
+            img: 'images/smGame5.png'
         },
         {
             name: 'smGame5',
-            pic: 'images/smGame5.png'
+            img: 'images/smGame5.png'
         },
         {
             name: 'smGame6',
-            pic: 'images/smGame6.png'
+            img: 'images/smGame6.png'
         },
         {
             name: 'smGame6',
-            pic: 'images/smGame6.png'
+            img: 'images/smGame6.png'
         }
     ]
 
@@ -63,17 +63,17 @@ document.addEventListener('DOMContentLoaded', () => {
     //create board
     function createBoard() {
         for (let i = 0; i < cardArray.length; i++) {
-            var card = document.createElement('pic')
+            var card = document.createElement('img')
             card.setAttribute('src', 'images/smGameBlank.png')
             card.setAttribute('data-id', i)
-            card.addEventListener('click', flipcard)
+            card.addEventListener('click', flipCard)
             grid.appendChild(card)
         }
     }
 
     // check for matches
     function checkForMatch() {
-        var cards = document.querySelectorAll('pic')
+        var cards = document.querySelectorAll('img')
         const optionOneId = cardsChosenId[0]
         const optionTwoId = cardsChosenId[1]
         if (cardsChosen[0] === cardsChosen[1]) {
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         var cardId = this.getAttribute('data-id')
         cardsChosen.push(cardArray[cardId].name)
         cardsChosenId.push(cardId)
-        this.setAttribute('src', cardArray[cardId].pic)
+        this.setAttribute('src', cardArray[cardId].img)
         if (cardsChosen.length === 2) {
             setTimeout(checkForMatch, 500)
         }
