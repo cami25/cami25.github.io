@@ -1,109 +1,43 @@
-document.addEventListener('DOMContentLoaded', () => {
+const cards = document.querySelectorAll('.memory-card');
 
-    //card options
-    const cardArray = [
-        {
-            name: 'smGame1',
-            img: 'images/smGame1.png'
-        },
-        {
-            name: 'smGame1',
-            img: 'images/smGame1.png'
-        },
-        {
-            name: 'smGame2',
-            img: 'images/smGame2.png'
-        },
-        {
-            name: 'smGame2',
-            img: 'images/smGame2.png'
-        },
-        {
-            name: 'smGame3',
-            img: 'images/smGame3.png'
-        },
-        {
-            name: 'smGame3',
-            img: 'images/smGame3.png'
-        },
-        {
-            name: 'smGame4',
-            img: 'images/smGame4.png'
-        },
-        {
-            name: 'smGame4',
-            img: 'images/smGame4.png'
-        },
-        {
-            name: 'smGame5',
-            img: 'images/smGame5.png'
-        },
-        {
-            name: 'smGame5',
-            img: 'images/smGame5.png'
-        },
-        {
-            name: 'smGame6',
-            img: 'images/smGame6.png'
-        },
-        {
-            name: 'smGame6',
-            img: 'images/smGame6.png'
-        }
-    ]
+let hasFlippedCard = false;
+let firstCard, secondCard;
 
-    cardArray.sort(() => 0.5 - Math.random())
+function flipCard() {
+    this.classList.add('flip');
+    
+    if (!hasFlippedCard) {
+    hasFlippedCard = true;
+    firstCard = this;
+    return;
+}
 
-    const grid = document.querySelector('.grid')
-    const resultDisplay = document.querySelector('#result')
-    var cardsChosen = []
-    var cardsChosenId = []
-    var cardsWon = []
+secondCard = this;
+hasFlippedCard = false;
 
-    //create board
-    function createBoard() {
-        for (let i = 0; i < cardArray.length; i++) {
-            var card = document.createElement('img')
-            card.setAttribute('src', 'images/smGameBlank.png')
-            card.setAttribute('data-id', i)
-            card.addEventListener('click', flipCard)
-            grid.appendChild(card)
-        }
+checkForMatch();
+}
+
+function checkForMatch() {
+    if (firstCard.dataset.framework === secondCard.dataset.framework) {
+        disableCards();
+        return;
     }
+    
+    unFlipCards();
+}
 
-    // check for matches
-    function checkForMatch() {
-        var cards = document.querySelectorAll('img')
-        const optionOneId = cardsChosenId[0]
-        const optionTwoId = cardsChosenId[1]
-        if (cardsChosen[0] === cardsChosen[1]) {
-            alert('Success!')
-            cards[optionOneId].setAttribute('src', 'images/smGameWhite.png')
-            cards[optionTwoId].setAttribute('src', 'images/smGameWhite.png')
-            cardsWon.push(cardsChosen)
-        } else {
-            cards[optionOneId].setAttribute('src', 'images/smGameBlank.png')
-            cards[optionTwoId].setAttribute('src', 'images/smGameBlank.png')
-            alert('Um, nope')
-        }
-        cardsChosen = []
-        cardsChosenId = []
-        resultDisplay.textContent = cardsWon.length
-        if (cardsWon.length === cardArray.length / 2) {
-            resultDisplay.textContent = 'Woohoo! All matches have been found!'
-        }
-    }
+function disableCards() {
+    firstCard.removeEventListener('click', flipCard);
+    secondCard.removeEventListener('click', flipCard);
+}
 
-    // flip card
-    function flipCard() {
-        var cardId = this.getAttribute('data-id')
-        cardsChosen.push(cardArray[cardId].name)
-        cardsChosenId.push(cardId)
-        this.setAttribute('src', cardArray[cardId].img)
-        if (cardsChosen.length === 2) {
-            setTimeout(checkForMatch, 500)
-        }
-    }
+function unFlipCards() {
+    setTimeout(() => {
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
+    }, 1000);
+}
 
-    createBoard()
-})
+
+cards.forEach(card => card.addEventListener('click', flipCard));
