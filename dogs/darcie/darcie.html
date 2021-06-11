@@ -15,6 +15,9 @@
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <link rel="stylesheet" href="darcie.css">
 
+  <!-- Javascript -->
+  <script src="darcie.js" charset="utf-8"></script>
+
   <style>
     .center {
       text-align: center;
@@ -95,11 +98,15 @@
     </div>
 
     <!-- Image -->
+    <!-- 
     <div class="row bg-light rounded p-2 mt-3">
       <div class="col">
         <div class="media">
-          <div class="media-body p-5 d-flex align-self-center">
-            <!--Mark Comment 5/16: Generally, you want to stay away from making text blue or purple since those colors are associated with hyperlinks.-->
+          <div class="media-body p-5 d-flex align-self-center"> 
+            -->
+    <!--Mark Comment 5/16: Generally, you want to stay away from making text blue or purple since those colors are associated with hyperlinks.-->
+
+    <!-- 
             <p> Here's a random dog image I thought was <span style="color:rgb(182, 199, 30)"><strong>
                   amusing</strong></span>:</p>
           </div>
@@ -108,6 +115,7 @@
         </div>
       </div>
     </div>
+ -->
 
     <!-- Table Title -->
     <div class="row bg-light rounded p-2 mt-3">
@@ -151,69 +159,68 @@
     </div>
     <!-- end Table -->
 
-
-    <!-- start JS memory game (good) -->
+    <!-- start JS memory game -->
     <div class="row bg-light rounded p-2 mt-3">
       <div class="col">
         <h4>MEMORY MATCH GAME</h4>
 
         <section class="memory-game">
-          <div class="memory-card" data-framework="1">
+          <div class="memory-card" data-framework="sg1">
             <img class="front-face" src="images/smGame1.png" alt="1">
             <img class="back-face" src="images/smGameBack.png" alt="Memory Card">
           </div>
 
-          <div class="memory-card" data-framework="1">
+          <div class="memory-card" data-framework="sg1">
             <img class="front-face" src="images/smGame1.png" alt="1">
             <img class="back-face" src="images/smGameBack.png" alt="Memory Card">
           </div>
 
-          <div class="memory-card" data-framework="2">
+          <div class="memory-card" data-framework="sg2">
             <img class="front-face" src="images/smGame2.png" alt="2">
             <img class="back-face" src="images/smGameBack.png" alt="Memory Card">
           </div>
 
-          <div class="memory-card" data-framework="2">
+          <div class="memory-card" data-framework="sg2">
             <img class="front-face" src="images/smGame2.png" alt="2">
             <img class="back-face" src="images/smGameBack.png" alt="Memory Card">
           </div>
 
-          <div class="memory-card" data-framework="3">
+          <div class="memory-card" data-framework="sg3">
             <img class="front-face" src="images/smGame3.png" alt="3">
             <img class="back-face" src="images/smGameBack.png" alt="Memory Card">
           </div>
 
-          <div class="memory-card" data-framework="3">
+          <div class="memory-card" data-framework="sg3">
             <img class="front-face" src="images/smGame3.png" alt="3">
             <img class="back-face" src="images/smGameBack.png" alt="Memory Card">
           </div>
 
-          <div class="memory-card" data-framework="4">
+          <div class="memory-card" data-framework="sg4">
             <img class="front-face" src="images/smGame4.png" alt="4">
             <img class="back-face" src="images/smGameBack.png" alt="Memory Card">
           </div>
 
-          <div class="memory-card" data-framework="4">
+          <div class="memory-card" data-framework="sg4">
             <img class="front-face" src="images/smGame4.png" alt="4">
             <img class="back-face" src="images/smGameBack.png" alt="Memory Card">
           </div>
 
-          <div class="memory-card" data-framework="5">
+          <div class="memory-card" data-framework="sg5">
             <img class="front-face" src="images/smGame5.png" alt="5">
             <img class="back-face" src="images/smGameBack.png" alt="Memory Card">
           </div>
 
-          <div class="memory-card" data-framework="5">
+          <div class="memory-card" data-framework="sg5">
             <img class="front-face" src="images/smGame5.png" alt="5">
             <img class="back-face" src="images/smGameBack.png" alt="Memory Card">
           </div>
 
-          <div class="memory-card" data-framework="6">
+          <div class="memory-card" data-framework="sg6">
             <img class="front-face" src="images/smGame6.png" alt="6">
             <img class="back-face" src="images/smGameBack.png" alt="Memory Card">
           </div>
 
-          <div class="memory-card" data-framework="6">
+          <div class="memory-card" data-framework="sg6">
             <img class="front-face" src="images/smGame6.png" alt="6">
             <img class="back-face" src="images/smGameBack.png" alt="Memory Card">
           </div>
@@ -222,6 +229,22 @@
         <br>
       </div>
     </div>
+    <!-- end JS #1 -->
+
+
+    <!-- start JS memory game #2 -->
+    <div class="row bg-light rounded p-2 mt-3">
+      <div class="col">
+        <h4>MEMORY MATCH GAME</h4>
+        <h3>Score:<span id="result"></span></h3>
+
+        <div class="grid">
+        </div>
+
+        <br>
+      </div>
+    </div>
+    <!-- end JS #2 -->
 
 
     <br>
@@ -230,8 +253,7 @@
   </div>
 
 
-  <!-- Javascript -->
-  <script src="darcie.js"></script>
+
 
   <!-- Bootstrap scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
