@@ -15,9 +15,6 @@
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <link rel="stylesheet" href="darcie.css">
 
-  <!-- Javascript -->
-  <script src="darcie.js" charset="utf-8"></script>
-
   <style>
     .center {
       text-align: center;
@@ -115,7 +112,7 @@
         </div>
       </div>
     </div>
- -->
+
 
     <!-- Table Title -->
     <div class="row bg-light rounded p-2 mt-3">
@@ -159,7 +156,81 @@
     </div>
     <!-- end Table -->
 
-    <!-- start JS memory game -->
+    <!-- JS countdown clock -->
+    <div class="row bg-light rounded p-2 mt-3">
+      <div class="col">
+        <br>
+        <section class="section-center">
+          <div class="row">
+  
+            <!-- image -->
+            <div class="col-7">
+              <article class="graduation-img">
+                <a href="https://www.uwb.edu/commencement" target="_blank">
+                  <img src="images/graduation.png" class="img-fluid mx-auto d-block rounded mb-5" style="width: 90%"
+                    alt="UW graduation picture">
+                </a>
+              </article>
+              <br>
+            </div>
+  
+            <!-- clock -->
+            <div class="col-5">
+              <article class="graduation-info">
+                <h2 class="text-danger">UWB graduation countdown</h2>
+                <h5 class="graduation">
+                </h5>
+                <p></p>
+  
+                <div class="deadline d-flex flex-wrap align-content-center mb-3">
+                  <!-- days -->
+                  <div class="deadline-format p-4 bg-info rounded center border border-white">
+                    <div>
+                      <h4 class="days number text-white"></h4>
+                      <span>days</span>
+                    </div>
+                  </div>
+                  <!-- end of days -->
+  
+                  <!-- hours -->
+                  <div class="deadline-format p-4 bg-info rounded center border border-white">
+                    <div>
+                      <h4 class="hours number text-white"></h4>
+                      <span>hours</span>
+                    </div>
+                  </div>
+                  <!-- end of hours -->
+  
+                  <!-- mins -->
+                  <div class="deadline-format p-4 bg-info rounded center border border-white">
+                    <div>
+                      <h4 class="mins number text-white"></h4>
+                      <span class="">mins</span>
+                    </div>
+                  </div>
+                  <!-- end of mins -->
+  
+                  <!-- seconds -->
+                  <div class="deadline-format p-4 bg-info rounded center border border-white">
+                    <div>
+                      <h4 class="seconds number text-white"></h4>
+                      <span>secs</span>
+                    </div>
+                  </div>
+                  <!-- end of seconds -->
+  
+                </div>
+              </article>
+            </div>
+            <!-- end clock -->
+  
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- end JS countdown clock -->
+
+    <!-- start (failed) JS memory game -->
     <div class="row bg-light rounded p-2 mt-3">
       <div class="col">
         <h4>MEMORY MATCH GAME</h4>
@@ -231,8 +302,7 @@
     </div>
     <!-- end JS #1 -->
 
-
-    <!-- start JS memory game #2 -->
+    <!-- start (failed) JS memory game #2 -->
     <div class="row bg-light rounded p-2 mt-3">
       <div class="col">
         <h4>MEMORY MATCH GAME</h4>
@@ -246,7 +316,6 @@
     </div>
     <!-- end JS #2 -->
 
-
     <br>
     <br>
     <br>
@@ -254,6 +323,8 @@
 
 
 
+  <!-- Javascript -->
+  <script src="darcie.js"></script>
 
   <!-- Bootstrap scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
