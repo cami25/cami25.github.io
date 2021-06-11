@@ -85,13 +85,14 @@ function getRemainingTime() {
         clearInterval(countdown);
         deadline.innerHTML = `<h4 class = "expired">Sorry, you've missed graduation</h4>`;
     }
-
 }
+
 // countdown
 let countdown = setInterval(getRemainingTime, 1000);
 
 getRemainingTime();
 // end js countdown clock
+
 
 // js failed memory game attempt #1
 const cards = document.querySelectorAll('.memory-card');
